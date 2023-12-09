@@ -1,0 +1,28 @@
+# Database connection settings
+# All the best!
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blogapi?useSSL=false&serverTimezone=UTC
+    username: root
+    password: p@ssw0rd
+  # hibernate properties
+  jpa:
+    properties:
+        hibernate:
+            formatSql: true
+            jdbc:
+                non-contextual-creation: true
+        databasePlatform: "org.hibernate.dialect.MySQL8Dialect"
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  # spring-boot security
+  #security:
+  #  user:
+  #    name: tinyverse
+  #    password: p@ssw0rd
+  #    roles:
+  #      - ADMIN
+
